@@ -1,0 +1,101 @@
+.features{
+
+    grid-column: 1/-1;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,1fr);
+    grid-template-rows: repeat(auto-fit,50vh);
+    filter: brightness(0.8);
+     font-family: 'Montserrat',sans-serif;
+
+    @include respond (min-phone){
+        margin-top: 10rem;
+        grid-template-columns: repeat(auto-fit,1fr);
+        grid-template-rows: repeat(auto-fit,30vh);
+        width: 90%;
+        margin-left: 5rem;
+
+    }
+
+    &-img{
+
+        @include respond ( min-phone){
+            width: 90%;
+        }
+
+        width: 100%;
+        min-height: 100%;
+        overflow: hidden;
+        img{
+            width: 100%;
+            min-height: 100%;
+            background-position: center;
+            background-size: cover;
+        transition: all 0.5s ease-in-out;
+  
+        }
+      
+    
+    &--1{
+        grid-row: 1/3;
+    }
+    &--2{
+        grid-row: 1/3;
+    }
+    &--3{
+        grid-row: 1/3;
+    }
+    &--4{
+        grid-row: 1/3;
+    }
+
+}
+
+&-markup{
+
+    transform: translateY(8rem)translateX(2rem);
+    line-height: 3rem;
+    &-h3{
+        color: #FF8008;
+       font-size: 1.5rem;
+    }
+    &-h2{
+        color: white;
+        font-size: 2rem;
+    }
+}
+   &-project{
+    display: flex;
+        align-items: center;
+        justify-content: start;
+        transform: translateY(-32rem) translateX(-20rem) rotateZ(270deg);
+    h2{
+        color:white;
+        font-size: 2rem;
+        font-weight: 400;
+
+    }
+    p{
+        margin-left: 4rem;
+        height: 5rem;
+        width: 0.1rem;
+        background-color: white;
+        transform: rotate(90deg);
+    }
+    }
+      &-icon{
+        fill: #eee;
+        width: 10rem;
+        height: 10rem;
+        margin-bottom: 2rem;
+        transform: translateY(-30rem) translateX(12rem);
+        transition: all 0.5s ease-in-out;
+        &:hover{
+            filter: brightness(2);
+          
+        }
+        @include respond ( min-phone){
+            transform: translateY(-20rem) translateX(6rem);
+        }
+    }
+}

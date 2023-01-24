@@ -1,0 +1,124 @@
+.ourblogs{
+    margin-top: 10rem;
+    grid-column: 1/-1;
+    position: relative;
+    padding-bottom: 10rem;
+
+    @include respond (min-phone){
+    margin-top: 20rem;
+    }
+
+
+    &-header{
+        filter: brightness(0.8);
+        display: grid;
+         grid-template-columns: repeat(3,1fr);
+    grid-gap: 1rem;
+
+    @include respond (min-phone){
+        margin-top: 4rem;
+    }
+
+        &--h3{
+              grid-column: 1/2;
+            color: #FF8008;
+            font-size: 2rem;
+
+            justify-self: flex-start;
+            transform: rotate(90deg);
+        }
+   &-markup{
+            filter: brightness(0.8);
+        grid-column: 2/3;
+                font-family: 'Montserrat',sans-serif;
+        h1{
+
+            font-size: 2rem;
+            color: white;
+            width:70%;
+            font-weight: 400;
+
+        }
+        p{
+            color: white;
+            filter: brightness(0.8);
+            font-size: 1.5rem;
+            font-weight: 300;
+
+            @include respond (min-phone){
+                font-size: 2rem;
+            }
+        }
+    }
+
+    }
+    &-btn{
+        border: 1px solid white;
+        position: absolute;
+        top: 2rem;
+        right: 4rem;
+               filter: brightness(0.8);
+           }
+&-content{
+            filter: brightness(0.7);
+  transform: translateY(3rem);
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+
+    @include respond (min-phone){
+        margin-top: 3rem;
+        flex-direction:  column;
+    }
+
+}
+
+           &-figure{
+            width: 100%;
+            height: 90%;
+            margin: 1rem;
+            img{
+                width: 100%;
+                height: 90%;
+                object-fit: cover;
+            }
+           }
+
+     &-caption{
+        padding: 1rem;
+        h1{
+            font-size: 2rem;
+            color: white;
+            font-weight: 400;
+            @include respond (min-phone){
+                margin-top: 1rem;
+                font-size: 2.8rem;
+            }
+        }
+
+        p{
+            padding-top: 1rem;
+            font-size: 1.2rem;
+            color: #eee;
+             font-weight: 300;
+            filter: brightness(0.8);
+
+            @include respond (min-phone){
+                font-size: 2.5rem;
+            }
+        }
+    }
+    button{
+        border: 1px solid white;
+        background: none;
+        color: white;
+        padding: 1rem;
+    }
+
+    &-Read{
+        text-decoration: none;
+        color: #FF8008;
+        font-size: 1.5rem;
+        }
+}

@@ -1,0 +1,61 @@
+*,*::after,*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'Nunito', sans-serif;
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+    @include respond(desktop){  //9 /16
+        font-size: 56.25%;
+    }
+    @include respond(tablet){
+        font-size: 50%;        //8/16
+    }
+    @include respond(phone){
+        font-size: 37.5%;      //6/16
+    }
+    @include respond(bigdesktop){ // 12 /16
+        font-size: 75%;
+    }
+ 
+}
+body{
+      background-color: #111010;
+      font-family:  'Nunito', sans-serif;
+}
+.container{
+    display: grid;
+    grid-template-rows: 10vh 70vh 70vw 50vh 55vw repeat(3, min-content);
+    grid-template-columns:  repeat(10,minmax(min-content,14rem));
+}
+
+.moveandback{
+    opacity: 0;
+    transform: translateY(8rem);
+}
+.m{
+    transition: all 0.5s ease-in-out;
+}
+
+.active{
+    transform: scale(1.2);
+    filter: brightness(1.2);
+    z-index: 2;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,45 @@
+
+
+//Media Query Manager
+
+//0-600px - mobile
+//600px  - 900px - tablet
+//900px  - 1200px - desktop
+//1200px - 1800px - our styles apply
+//1800px - - min-width: 1800px;
+
+
+//break point choices
+
+@mixin respond ($breakpoint) {
+
+     @if $breakpoint == min-phone {
+        @media Screen and (max-width: 30em) { //480px 480px/16=
+            @content;
+        }
+          
+     }
+
+   @if $breakpoint == phone {
+       @media Screen and (max-width: 37.5em) { //600px
+           @content;
+       }
+   }
+    @if $breakpoint == tablet {
+        @media Screen and (max-width:56.25em) { //900px
+              @content;
+         }
+    }
+    @if $breakpoint == desktop {
+         @media Screen and (max-width: 75em) { //1200px
+              @content;
+         }
+    }
+    @if $breakpoint ==bigdesktop {
+         @media Screen and (min-width: 112.5em) { //1800px
+              @content;
+         }
+    }
+     
+    }
+
